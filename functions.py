@@ -35,7 +35,9 @@ def multipOnNumber(matrix, number):
             matrix[y][x] = number * matrix[y][x]
 
 def transp(matrix):
-    matrix2 = matrix
-    for y in range(len(matrix)):
-        for x in range(len(matrix[y])):
-            pass
+    matrix2 = []
+    for x in range(len(matrix[0])):
+        matrix2.append([])
+        for y in range(len(matrix)):
+            matrix2[x].append(matrix[y][x])
+    return matrix2
