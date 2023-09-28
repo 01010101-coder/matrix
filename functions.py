@@ -41,3 +41,15 @@ def transp(matrix):
         for y in range(len(matrix)):
             matrix2[x].append(matrix[y][x])
     return matrix2
+
+def matrixAddition(matrix, matrix2):
+    if len(matrix) != len(matrix2) or len(matrix[0]) != len(matrix[0]):
+        print("Матрицы невозможно сложить")
+        return 0
+    matrix_sum = matrix
+    for y in range(len(matrix)):
+        for x in range(len(matrix[y])):
+            matrix_sum[y][x] = matrix[y][x] + matrix2[y][x]
+
+    matrix_print(matrix_sum)
+    return matrix_sum
